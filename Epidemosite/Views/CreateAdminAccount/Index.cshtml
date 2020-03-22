@@ -1,0 +1,18 @@
+﻿@model EPiServer.Shell.Security.IUIUser
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Create admin account page</h2>
+
+@if(Model == null){
+    <div>Admin doesn't exist.</div>
+
+    @Html.ActionLink("Create admin account", "CreateAdmin",null,new { @class="btn btn-primary" })
+}
+else
+{
+    <div>Admin account already exist!</div>
+}
+
